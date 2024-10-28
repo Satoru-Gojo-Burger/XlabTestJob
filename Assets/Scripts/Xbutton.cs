@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Xbutton : MonoBehaviour
 {
+    public Transform point;
     public GameObject stonePrefab;
-    void Update()
+
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Vector3 pointPosition = transform.position;
-            Instantiate(stonePrefab, pointPosition, Quaternion.identity);
-        }
+        if (point == null)
+            point = transform;
+    }
+
+    public void Spawn()
+    {
+        Instantiate(stonePrefab, point.position, point.rotation);
     }
 }
