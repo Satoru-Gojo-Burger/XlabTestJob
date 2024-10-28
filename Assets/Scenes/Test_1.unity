@@ -15665,7 +15665,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: {fileID: 729595766}
-  stonePrefab: {fileID: 1563789486086316150, guid: 588f225a572c5f64ea3a934495848f68, type: 3}
+  stonePrefabs:
+  - {fileID: 1563789486086316150, guid: 588f225a572c5f64ea3a934495848f68, type: 3}
+  - {fileID: 1563789486086316150, guid: 588f225a572c5f64ea3a934495848f68, type: 3}
+  - {fileID: 1563789486086316150, guid: 588f225a572c5f64ea3a934495848f68, type: 3}
 --- !u!4 &729595766
 Transform:
   m_ObjectHideFlags: 0

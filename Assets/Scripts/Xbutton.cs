@@ -5,7 +5,7 @@ using UnityEngine;
 public class Xbutton : MonoBehaviour
 {
     public Transform point;
-    public GameObject stonePrefab;
+    public GameObject[] stonePrefabs;
 
     private void Start()
     {
@@ -15,6 +15,7 @@ public class Xbutton : MonoBehaviour
 
     public void Spawn()
     {
-        Instantiate(stonePrefab, point.position, point.rotation);
+        int index = Random.Range(0, stonePrefabs.Length);
+        Instantiate(stonePrefabs[index], point.position, point.rotation);
     }
 }
