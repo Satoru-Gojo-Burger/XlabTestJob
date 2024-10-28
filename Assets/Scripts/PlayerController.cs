@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private FreeCamera freeCamera;
     public GameObject ui;
     public Xbutton xbutton;
+    public Zbutton zbutton;
     void Update()
     {
         if (ui.activeSelf)
@@ -24,6 +25,13 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X))
             {
                 xbutton.Spawn();
+            }
+        }
+        if (zbutton != null)
+        {
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                zbutton.MoveNext();
             }
         }
     }
