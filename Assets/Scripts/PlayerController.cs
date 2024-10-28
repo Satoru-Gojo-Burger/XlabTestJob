@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private FreeCamera freeCamera;
-    public GameObject ui;
-    public Xbutton xbutton;
-    public Zbutton zbutton;
+    [SerializeField] private FreeCamera freeCamera;
+    [SerializeField] private GameObject ui;
+    [SerializeField] private Xbutton xbutton;
+    [SerializeField] private Zbutton zbutton;
+    [SerializeField] private SpasebuttonController SpasebuttonController;
     void Update()
     {
         if (ui.activeSelf)
@@ -32,6 +32,13 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 zbutton.MoveNext();
+            }
+        }
+        if (SpasebuttonController != null)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SpasebuttonController.Change();
             }
         }
     }
