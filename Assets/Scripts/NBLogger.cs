@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class NBLogger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        Log("Awake");
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnAble()
     {
-        
+        Log("Awake");
+    }
+    private void Start()
+    {
+        Log("Awake");
+    }
+    private void FixedUpdate(){}
+
+    
+    private void Log(string msg)
+    {
+        Debug.Log($"{name}: msg - frame{Time.frameCount}");
     }
 }

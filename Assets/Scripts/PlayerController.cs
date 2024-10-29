@@ -1,45 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
-public class PlayerController : MonoBehaviour
+namespace Golf
 {
-    [SerializeField] private FreeCamera freeCamera;
-    [SerializeField] private GameObject ui;
-    [SerializeField] private Xbutton xbutton;
-    [SerializeField] private Zbutton zbutton;
-    [SerializeField] private SpasebuttonController SpasebuttonController;
+public class Plaercontroller : MonoBehaviour
+{
+    public Transform stick;
+    public float max_Angel = 30;
     void Update()
     {
-        if (ui.activeSelf)
+        var angle = stick.localEulerAngles;
+        if(Input.GetMouseButton(0))
         {
-            return;
-        }
-        if (freeCamera != null)
-        {
-            freeCamera.Move();
-        }
-        if (xbutton != null)
-        {
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                xbutton.Spawn();
-            }
-        }
-        if (zbutton != null)
-        {
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                zbutton.MoveNext();
-            }
-        }
-        if (SpasebuttonController != null)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                SpasebuttonController.Change();
-            }
+            
         }
     }
+}
 }
