@@ -18,7 +18,7 @@ public class Zbutton : MonoBehaviour
         Debug.Log("Try Move");
         m_isMoving = true;
             i = i + 1;
-            if (i == 7)
+            if (i == 8)
                 i = 0;
     }
 
